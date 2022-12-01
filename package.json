@@ -1,0 +1,38 @@
+{
+  "name": "aoc2022",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "d1": "ts-node days/d1.ts",
+    "d2": "ts-node days/d2.ts",
+    "d3": "ts-node days/d3.ts",
+    "d4": "ts-node days/d4.ts",
+    "d5": "ts-node days/d5.ts",
+    "d6": "ts-node days/d6.ts",
+    "d7": "ts-node days/d7.ts",
+    "d8": "ts-node days/d8.ts",
+    "d9": "ts-node days/d9.ts",
+    "d10": "ts-node days/d10.ts",
+    "d11": "ts-node days/d11.ts",
+    "d12": "ts-node days/d12.ts",
+    "d13": "ts-node days/d13.ts",
+    "d14": "ts-node days/d14.ts",
+    "d15": "ts-node days/d15.ts",
+    "d16": "ts-node days/d16.ts",
+    "d17": "ts-node days/d17.ts",
+    "d18": "ts-node days/d18.ts",
+    "d19": "ts-node days/d19.ts",
+    "d20": "ts-node days/d20.ts",
+    "d21": "ts-node days/d21.ts",
+    "d22": "ts-node days/d22.ts",
+    "d23": "ts-node days/d23.ts",
+    "d24": "ts-node days/d24.ts",
+    "d25": "ts-node days/d25.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3"
+  }
+}
