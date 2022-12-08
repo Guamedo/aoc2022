@@ -1,20 +1,7 @@
 import { getInputOfDay } from "../utils/utils";
 
-const test = `    [D]    
-[N] [C]    
-[Z] [M] [P]
- 1   2   3 
-
-move 1 from 2 to 1
-move 3 from 1 to 3
-move 2 from 2 to 1
-move 1 from 1 to 2`;
-
 (async () => {
-
     const data = await getInputOfDay(5);
-    
-    // const [stacks, moves] = test.split(/\r?\n\r?\n/);
     const [stacks, moves] = data.split(/\r?\n\r?\n/);
     
     // Parse stacks
@@ -32,12 +19,9 @@ move 1 from 1 to 2`;
             }
         }
     }
-    // console.log(stacksDict);
     
     // Parse moves
-    console.log(moves);
-    
-    const parsedMoves = moves.split(/\r?\n/).filter(m => m).map(m => m.replace('move ', '').split(/ from | to /).map(e => Number(e)));
+    const parsedMoves = moves.split(/\r?\n/).map(m => m.replace('move ', '').split(/ from | to /).map(e => Number(e)));
     
     const stacksDict9001 = JSON.parse(JSON.stringify(stacksDict));
     for (const move of parsedMoves) {

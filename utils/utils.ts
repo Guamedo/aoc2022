@@ -11,7 +11,7 @@ export function getInputOfDay(day: number): Promise<string>{
         }, (res) => {
             res.setEncoding('utf8');
             res.on('error', (err) => reject(err));
-            res.on('data', (data) => resolve(data));
+            res.on('data', (data) => resolve(data.replace(/\n$/, '')));
         });
         request.on('error', (err) => reject(err));
         request.end();
