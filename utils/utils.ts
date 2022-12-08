@@ -1,5 +1,4 @@
 import https from 'https';
-import { cookies } from '../config/config';
 
 export function getInputOfDay(day: number): Promise<string>{
     return new Promise((resolve, reject) => {
@@ -7,7 +6,7 @@ export function getInputOfDay(day: number): Promise<string>{
             host: 'adventofcode.com',
             path: `/2022/day/${day}/input`,
             headers: {
-                cookie: cookies
+                cookie: process.env.AOC2022_COOKIES
             }
         }, (res) => {
             res.setEncoding('utf8');
