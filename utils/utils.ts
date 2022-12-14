@@ -9,9 +9,11 @@ export function getInputOfDay(day: number): Promise<string>{
                 cookie: process.env.AOC2022_COOKIES
             }
         }, (res) => {
+            let inputData = '';
             res.setEncoding('utf8');
             res.on('error', (err) => reject(err));
-            res.on('data', (data) => resolve(data.replace(/\n$/, '')));
+            res.on('data', (data) => inputData += data);
+            res.on('end', () => {resolve(inputData.replace(/\n$/, ''))});
         });
         request.on('error', (err) => reject(err));
         request.end();
