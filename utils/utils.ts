@@ -19,3 +19,5 @@ export function getInputOfDay(day: number): Promise<string>{
         request.end();
     });
 }
+
+export interface Vec {x: number, y: number};
