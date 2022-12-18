@@ -40,6 +40,7 @@ export function getInputOfDay(day: number): Promise<string>{
 }
 
 export interface Vec {x: number, y: number};
+export interface Vec3 {x: number, y: number, z: number};
 
 export function euclideanDist(p1: Vec, p2: Vec): number{
     return Math.sqrt((p2.x-p1.x)**2 + (p2.y-p1.y)**2);
