@@ -49,3 +49,7 @@ export function euclideanDist(p1: Vec, p2: Vec): number{
 export function manhattanDist(p1: Vec, p2: Vec): number{
     return Math.abs(p2.x-p1.x)+Math.abs(p2.y-p1.y);
 }
+
+export function deepCopy(obj: any){
+    return JSON.parse(JSON.stringify(obj));
+}
