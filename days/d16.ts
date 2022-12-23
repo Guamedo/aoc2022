@@ -75,4 +75,18 @@ function parseInput(input: string){
   dfs(valves.find(v => v.id === 'AA') as Valve, []);
   console.log(maxValue);
 
+  maxValue = 0;
+  // TODO: Update function for player-elephant search
+  function dfsElephant(valve: Valve, path: Valve[], time: number = 30, value: number = 0, elephantTurn: false){
+    const nextValves = valvesWithRate.filter(vId => !path.find(v => v.id === vId)).map(vId => valves.find(v => v.id === vId)) as Valve[];
+    if(time <= 0) return;
+    for(const nextValve of nextValves){
+      dfs(nextValve, [...path, nextValve], time-(valve.dist[nextValve.id]+1), value+nextValve.rate*(time-(valve.dist[nextValve.id]+1)));
+    }
+    maxValue = Math.max(maxValue, value);
+  }
+
+  dfs(valves.find(v => v.id === 'AA') as Valve, []);
+  console.log(maxValue);
+
 })();
