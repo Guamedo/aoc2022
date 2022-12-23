@@ -53,3 +53,7 @@ export function manhattanDist(p1: Vec, p2: Vec): number{
 export function deepCopy(obj: any){
     return JSON.parse(JSON.stringify(obj));
 }
+
+export function negativeMod(n: number, m: number) {
+    return ((n % m) + m) % m;
+}

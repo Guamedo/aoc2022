@@ -39,6 +39,7 @@ function parseInput(monkeyStr: string){
   monkeys['humn'].val = 'x';
   const rootMonkeyVal = monkeys['root'].val;
 
+  // Use sympy solve to get te value of x for [getMonkeyValue(rootMonkeyVal[0]) - getMonkeyValue(rootMonkeyVal[2]) = 0] equation
   console.log(getMonkeyValue(rootMonkeyVal[0]));
   console.log(getMonkeyValue(rootMonkeyVal[2]));
 })();
