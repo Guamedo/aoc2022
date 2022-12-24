@@ -1,19 +1,10 @@
 import { euclideanDist, getInputOfDay, Vec } from "../utils/utils";
 
-const test = 
-`....#..
-..###.#
-#...#.#
-.#...##
-#.###..
-##.#.##
-.#..#..`;
-
 interface Elf {position: Vec, nextPosition: Vec}
-
 (async () => {
-  const elves: Elf[] = [];
   const data = await getInputOfDay(23);
+
+  const elves: Elf[] = [];
   for (let y = 0; y < data.split(/\r?\n/).length; y++) {
     const element = data.split(/\r?\n/)[y];
     for(let x = 0; x < element.length; x++){
@@ -39,7 +30,6 @@ interface Elf {position: Vec, nextPosition: Vec}
 
   let movedElf = true;
   let round = 0;
-  // for (let i = 0; i < 10; i++) {
   while(movedElf){
     // Calculate Next position
     for (let j = 0; j < elves.length; j++) {
@@ -114,19 +104,4 @@ interface Elf {position: Vec, nextPosition: Vec}
     }
   }
   console.log(round);
-  
-
-  // let minX = Infinity;
-  // let maxX = -Infinity;
-  // let minY = Infinity;
-  // let maxY = -Infinity;
-  // for (const elf of elves) {
-  //   if(elf.position.x < minX) minX = elf.position.x;
-  //   if(elf.position.x > maxX) maxX = elf.position.x;
-  //   if(elf.position.y < minY) minY = elf.position.y;
-  //   if(elf.position.y > maxY) maxY = elf.position.y;
-  // }
-
-  
-  
 })();
